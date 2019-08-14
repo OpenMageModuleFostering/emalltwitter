@@ -1,0 +1,165 @@
+<!--
+Magento Twitter Extension - SMDTwitter
+Copyright (C) 2012  SMDesign - www.smdesign.rs/www.extensionsmall.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+If you like our Extensions please keep the link at the bottom of widget.
+
+-->
+
+<?php
+$twitterConfig = $this->getTwitterConfig();
+$twitterConfigEnabled = ($twitterConfig['enabled']!='') ? $twitterConfig['enabled'] : '1';
+$twitterConfigTwitterFeed = ($twitterConfig['twitter_feed']!='') ? $twitterConfig['twitter_feed'] : 'smdesignserbia';
+$twitterConfigTwitterFeedNumber = ($twitterConfig['twitter_feed_number']!='') ? $twitterConfig['twitter_feed_number'] : '4';
+$twitterConfigTwitterBoxSide = ($twitterConfig['twitter_box_side']!='') ? $twitterConfig['twitter_box_side'] : '1';
+$twitterConfigTwitterBoxTopPosition = $twitterConfig['twitter_box_top_position']!='' ? $twitterConfig['twitter_box_top_position'] : '50px';
+$twitterConfigTwitterBoxWidth = ($twitterConfig['twitter_box_width']!='') ? $twitterConfig['twitter_box_width'] : '300';
+$twitterConfigTwitterBoxHeight = ($twitterConfig['twitter_box_height']!='') ? $twitterConfig['twitter_box_height'] : '300';
+$twitterConfigTwitterBoxBackground = ($twitterConfig['twitter_box_background']!='') ? $twitterConfig['twitter_box_background'] : '#333333';
+$twitterConfigTwitterBoxColor = ($twitterConfig['twitter_box_color']) ? $twitterConfig['twitter_box_color'] : '#ffffff';
+$twitterConfigTwitterTweetsBackground = ($twitterConfig['twitter_tweets_background']!='') ? $twitterConfig['twitter_tweets_background'] : '#000000';
+$twitterConfigTwitterTweetsColor = ($twitterConfig['twitter_tweets_color']!='') ? $twitterConfig['twitter_tweets_color'] : '#ffffff';
+$twitterConfigTwitterTweetsLinkColor = ($twitterConfig['twitter_tweets_link_color']!='') ? $twitterConfig['twitter_tweets_link_color'] : '#4aed05';
+?>
+<?php if($twitterConfigEnabled == 1){ ?>
+	<style type="text/css">
+		div.smdtwitter-wraper{
+			position:fixed;
+			top:<?php echo $twitterConfigTwitterBoxTopPosition ?>px;
+		}
+		div.smdtwitter-wraper.left{
+			left:0px;
+		}
+		div.smdtwitter-wraper.right{
+			right:0px;
+		}
+		div#smdtwitter{
+			background: <?php echo $twitterConfigTwitterBoxBackground ?>;
+			float:left;
+		}
+		div#smdtwitter label{
+			padding:5px;
+			color:<?php echo $twitterConfigTwitterTweetsColor ?>; 
+		}
+		div#smdtwitter label a{
+			text-decoration:none;
+			color:<?php echo $twitterConfigTwitterTweetsLinkColor ?>;
+		}
+		div#smdtwitter label a:hover{
+			text-decoration:underline;
+		}
+		div.smdtwitter-wraper.left div#smdtwitter{
+			border-radius: 0 10px 10px 0;
+			box-shadow: 3px 3px 10px <?php echo $twitterConfigTwitterBoxBackground ?>;
+		}
+		div.smdtwitter-wraper.right div#smdtwitter{
+			border-radius: 10px 0 10px 10px;
+			box-shadow: -3px 3px 10px <?php echo $twitterConfigTwitterBoxBackground ?>;
+		}
+		#smdtwitter-open{
+			background: <?php echo $twitterConfigTwitterBoxBackground ?>;
+			color:<?php echo $twitterConfigTwitterTweetsColor ?>; 
+			display: inline-block;
+			padding: 5px;
+			text-decoration: none;
+		}
+		.smdtwitter-wraper.left #smdtwitter-open{
+			border-radius: 0 5px 0 0;
+			box-shadow: 3px 3px 10px <?php echo $twitterConfigTwitterBoxBackground ?>;
+		}
+		.smdtwitter-wraper.right #smdtwitter-open{
+			border-radius: 5px 0 0 0;
+			box-shadow: -3px 3px 10px <?php echo $twitterConfigTwitterBoxBackground ?>;
+			float: right;
+		}
+	</style>
+	<script>
+		function createCookie(name,value,days) {
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime()+(days*24*60*60*1000));
+				var expires = "; expires="+date.toGMTString();
+			}
+			else var expires = "";
+			document.cookie = name+"="+value+expires+"; path=/";
+		}
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+		function eraseCookie(name) {
+			createCookie(name,"",-1);
+		}
+		function setState(){
+			if(readCookie('smdtwitt')==null){
+				createCookie('smdtwitt','hide',1);
+			} else {
+				eraseCookie('smdtwitt');
+			}
+		}
+		function checkCookie() {
+			if(readCookie('smdtwitt')=='hide'){
+				$('smdtwitter').hide();
+			}
+		}
+	</script>
+
+	<div class="smdtwitter-wraper <?php if($twitterConfigTwitterBoxSide==1){ echo('left'); } else { echo('right'); } ;?>" id="smdtwitter-wraper">
+		<a id="smdtwitter-open" onclick="$('smdtwitter').toggle('blind'); setState(); return false;" href="#">Follow us @<?php echo $twitterConfigTwitterFeed ?></a>
+		<br />
+		<div class="smdtwitter" id="smdtwitter">
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: 'profile',
+			  rpp: <?php echo $twitterConfigTwitterFeedNumber ?>,
+			  interval: 30000,
+			  width: <?php echo $twitterConfigTwitterBoxWidth ?>,
+			  height: <?php echo $twitterConfigTwitterBoxHeight ?>,
+			  theme: {
+				shell: {
+				  background: '<?php echo $twitterConfigTwitterBoxBackground ?>',
+				  color: '<?php echo $twitterConfigTwitterBoxColor ?>'
+				},
+				tweets: {
+				  background: '<?php echo $twitterConfigTwitterTweetsBackground ?>',
+				  color: '<?php echo $twitterConfigTwitterTweetsColor ?>',
+				  links: '<?php echo $twitterConfigTwitterTweetsLinkColor ?>'
+				}
+			  },
+			  features: {
+				scrollbar: false,
+				loop: false,
+				live: false,
+				behavior: 'all'
+			  }
+			}).render().setUser('<?php echo $twitterConfigTwitterFeed ?>').start();
+		</script>
+		<label>Powered by <a href="http://www.extensionsmall.com/" target="_blank">Extensions Mall</a></label>
+		</div>
+	</div>
+	<script>
+		checkCookie();
+	</script>
+<?php } ?>
+

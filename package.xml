@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>EMALLTWITTER</name>
+    <version>0.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Show your latest tweets on your Magento website using our ExtensionsMall Twitter extension.</summary>
+    <description>With our ExtensionsMall Twitter Extension you can: style the "Latest Tweets Box" to your Magento theme using only Magento Administration, choose where you'd like to show your "Latest Tweets Box" on your Magento website, choose what width and height you&amp;#x2019;d like "Latest Tweets Box" to be and select how many latest tweets you&amp;#x2019;d like to show to the users</description>
+    <notes>First stable version of our ExtensionsMall Twitter extension.</notes>
+    <authors><author><name>SMDesign</name><user>smdesign</user><email>info@smdesign-usa.com</email></author></authors>
+    <date>2012-08-21</date>
+    <time>14:16:35</time>
+    <contents><target name="magecommunity"><dir name="SMDesign"><dir name="SMDTwitter"><dir name="Block"><file name="Twitter.php" hash="5a095967e76f9e1198b02120420aa159"/></dir><dir name="Helper"><file name="Data.php" hash="5806661c52992e2298210c419e6e90a4"/><file name="Help.php" hash="e36870dbe215aa242b54de4a5f3c58c3"/></dir><dir name="Model"><file name="Salute.php" hash="78c806803ab4e30bf586751bef1db58f"/><dir name="System"><dir name="Config"><dir name="Source"><dir name="Load"><file name="Options.php" hash="cf5e67f36e394f96d5aeffb200107136"/></dir></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="967355066370bf77f9f6e688fc2ed732"/><file name="config.xml" hash="df7ddfcdf0651914c6e776cc38166f7f"/><file name="system.xml" hash="bdd3979342f275d238aa904bc2080dcc"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="smdtwitter.xml" hash="e8148381f49b99adc388f8d6d59791c7"/></dir><dir name="template"><dir name="smdtwitter"><file name="twitter.phtml" hash="34178263ea1b228a2cd701acd9755c7c"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="SMDesign_SMDTwitter.xml" hash="8fcffa15dab837a2eedc8b4323cc343c"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

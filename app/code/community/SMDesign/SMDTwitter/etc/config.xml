@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <SMDesign_SMDTwitter>
+      <version>0.0.1</version>
+    </SMDesign_SMDTwitter>
+  </modules>
+ 
+  <global>
+    <models>
+      <smdtwitter>
+        <class>SMDesign_SMDTwitter_Model</class>
+      </smdtwitter>
+    </models>
+ 
+    <blocks>
+      <smdtwitter>
+        <class>SMDesign_SMDTwitter_Block</class>
+      </smdtwitter>
+    </blocks>
+ 
+    <helpers>
+      <smdtwitter>
+        <class>SMDesign_SMDTwitter_Helper</class>
+      </smdtwitter>
+    </helpers>
+  </global>
+ 
+  <frontend>
+    <layout>
+      <updates>
+        <smdtwitter>
+          <file>smdtwitter.xml</file>
+        </smdtwitter>
+      </updates>
+    </layout>
+  </frontend>
+  
+  <!--	START DEFAULTS	-->
+	<default>
+		<smdesign_smdtwitter>
+			<twitter>
+				<enabled>1</enabled>
+				<twitter_feed>smdesignserbia</twitter_feed>
+				<twitter_feed_number>4</twitter_feed_number>
+				<twitter_box_side>1</twitter_box_side>
+				<twitter_box_top_position>50</twitter_box_top_position>
+				<twitter_box_width>250</twitter_box_width>
+				<twitter_box_height>250</twitter_box_height>
+				<twitter_box_background>#618499</twitter_box_background>
+				<twitter_box_color>#ffffff</twitter_box_color>
+				<twitter_tweets_background>#B6D1E2</twitter_tweets_background>
+				<twitter_tweets_color>#ffffff</twitter_tweets_color>
+				<twitter_tweets_link_color>#496778</twitter_tweets_link_color>
+				
+			</twitter>
+		</smdesign_smdtwitter>
+	</default>
+<!--	END DEFAULTS	-->
+
+</config>

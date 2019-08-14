@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="content">
+            <block type="smdtwitter/twitter" name="smdtwitter" template="smdtwitter/twitter.phtml" after="-" />
+        </reference>
+    </default>
+</layout>
