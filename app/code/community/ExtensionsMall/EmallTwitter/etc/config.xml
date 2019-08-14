@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <ExtensionsMall_EmallTwitter>
+      <version>2.0.0</version>
+    </ExtensionsMall_EmallTwitter>
+  </modules>
+ 
+  <global>
+    <models>
+      <emalltwitter>
+        <class>ExtensionsMall_EmallTwitter_Model</class>
+      </emalltwitter>
+    </models>
+ 
+    <blocks>
+      <emalltwitter>
+        <class>ExtensionsMall_EmallTwitter_Block</class>
+      </emalltwitter>
+    </blocks>
+ 
+    <helpers>
+      <emalltwitter>
+        <class>ExtensionsMall_EmallTwitter_Helper</class>
+      </emalltwitter>
+    </helpers>
+  </global>
+ 
+  <frontend>
+    <layout>
+      <updates>
+        <emalltwitter>
+          <file>emalltwitter.xml</file>
+        </emalltwitter>
+      </updates>
+    </layout>
+  </frontend>
+  
+  <!--	START DEFAULTS	-->
+	<default>
+		<extensionsmall_emalltwitter>
+				<twitter>
+					<enabled>1</enabled>
+					<twitter_feed>extensionsmall</twitter_feed>
+                    <twitter_api>349071818910494720</twitter_api>
+					<twitter_feed_number>0</twitter_feed_number>
+					<twitter_box_side>1</twitter_box_side>
+					<twitter_box_top_position>50</twitter_box_top_position>
+					<twitter_box_width>250</twitter_box_width>
+					<twitter_box_height>250</twitter_box_height>
+					<twitter_box_background>#618499</twitter_box_background>
+					<twitter_tweets_link_color>#496778</twitter_tweets_link_color>
+                    <twitter_chrome_values>transparent</twitter_chrome_values>
+                    <twitter_theme>dark</twitter_theme>
+				</twitter>
+		</extensionsmall_emalltwitter>
+	</default>
+<!--	END DEFAULTS	-->
+
+</config>

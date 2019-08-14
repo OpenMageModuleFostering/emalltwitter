@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <extensionsmall_extensions_config translate="label" module="catalog">
+            <label>Extensionsmall Extensions Config</label>
+            <sort_order>300</sort_order>
+        </extensionsmall_extensions_config>
+    </tabs>
+	<sections>
+		<extensionsmall_emalltwitter translate="label" module="emalltwitter">
+			<label>Emall Twitter</label>
+				<tab>extensionsmall_extensions_config</tab>
+				<frontend_type>text</frontend_type>
+				<sort_order>10</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+				<groups>
+					<twitter translate="label">
+					<label>Twitter Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>200</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled>
+							<label>Enable Twitter</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Enable Emall Twitter plugin</comment>
+						</enabled>
+						
+						<twitter_feed>
+							<label>Twitter Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>155</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Twitter username</comment>
+						</twitter_feed>
+						
+						<twitter_api>
+							<label>Twitter Widget ID</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>156</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Copy your data-widget-id from embed code</comment>
+						</twitter_api>
+						
+						<twitter_feed_number>
+							<label>Number of Twitter Feeds</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>160</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Number of twitter feeds to display, unlimited by default</comment>
+						</twitter_feed_number>
+						
+						
+						<twitter_box_top_position>
+							<label>Twitter Container Top Position</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>163</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Twitter Container offset from top of screen</comment>
+						</twitter_box_top_position>
+						
+						<twitter_box_side>
+							<label>Twitter Container Side</label>
+							<frontend_type>select</frontend_type>
+							<source_model>emalltwitter/system_config_source_load_options</source_model>
+							<sort_order>163</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Select side to display twitter container</comment>
+						</twitter_box_side>
+						
+						<twitter_box_width>
+							<label>Twitter Container Width</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>164</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</twitter_box_width>
+						
+						<twitter_box_height>
+							<label>Twitter Container Height</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>165</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</twitter_box_height>
+						
+						<twitter_box_background>
+							<label>Twitter Container Background Color</label>
+							<frontend_type>text</frontend_type>
+                            <frontend_model>emalltwitter/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>166</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</twitter_box_background>
+						
+						<twitter_tweets_link_color>
+							<label>Twitter Tweets Links Color</label>
+							<frontend_type>text</frontend_type>
+                            <frontend_model>emalltwitter/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>167</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</twitter_tweets_link_color>
+                        
+                        <twitter_chrome_values>
+							<label>Layout options</label>
+							<frontend_type>multiselect</frontend_type>
+                            <source_model>emalltwitter/system_config_source_load_chrome</source_model>
+							<sort_order>168</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                            <comment>Use Ctrl+click to select more than one option</comment>
+						</twitter_chrome_values>
+                        
+                        	<twitter_theme>
+							<label>Twitter Theme</label>
+							<frontend_type>select</frontend_type>
+							<source_model>emalltwitter/system_config_source_load_theme</source_model>
+							<sort_order>169</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Select twitter theme</comment>
+						</twitter_theme>
+                      						
+					</fields>
+				</twitter> 				
+			</groups>
+		</extensionsmall_emalltwitter>
+	</sections>
+</config>

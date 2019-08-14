@@ -3,11 +3,11 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Show your latest tweets on your Magento website using our ExtensionsMall Twitter extension.",
+    "description": "SMD Emall Twitter extension",
     "authors": [
     {
-        "name": "SMDesign",
-        "email": "info@smdesign-usa.com"
+        "name": "Extensions Mall",
+        "email": "info@extensionsmall.com"
     }
 ],
     "suggest": {
