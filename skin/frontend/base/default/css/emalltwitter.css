@@ -1,0 +1,72 @@
+div.emalltwitter-wraper{
+    z-index: 1000;
+    position:fixed;
+}
+div.emalltwitter-wraper.left{
+    left:0px;
+}
+div.emalltwitter-wraper.right{
+    right:0px;
+}
+div#emalltwitter{
+    float:left;
+}
+div#emalltwitter label {
+    border-radius: 0 0 9px 9px !important;
+    color: #FFFFFF;
+    float: left;
+    padding: 5px;
+    width: 96%;
+    font-size: 11px;
+}
+.twtr-doc {
+    border-radius: 5px 5px 0px 0px !important;
+}
+div#emalltwitter label a{
+    text-decoration:none;
+    color: #fff;
+}
+div#emalltwitter label a:hover{
+    text-decoration:underline;
+}
+div.emalltwitter-wraper.left div#emalltwitter{
+    border-radius: 5px 5px 10px 10px;
+    padding: 0 5px;
+}
+div.emalltwitter-wraper.right div#emalltwitter{
+    border-radius: 10px 0 10px 10px;
+    padding: 0 5px;
+}
+#emalltwitter-open{
+    background-color:  #3e3e3e;
+    background-image: url("../images/emalltwitter/twitter-button.png");
+    background-position: 6px 6px ;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.1s ease 0.2s;
+    height: 40px;
+    width: 40px;
+    padding: 6px;
+}
+#emalltwitter-open:hover,
+.emalltwitter-wraper #emalltwitter-open.open{
+    background-image: url("../images/emalltwitter/twitter-button-hover.png");
+    background-position: 6px 6px ;
+    background-repeat: no-repeat;
+    width: 110px;
+}
+#emalltwitter-open:hover {
+    transition: all .2s;
+    padding-left: 110px;
+}
+.emalltwitter-wraper.left #emalltwitter-open{
+    border-radius: 0 27px 27px 0;
+    margin-bottom: 1px;
+}
+.emalltwitter-wraper.right #emalltwitter-open{
+    border-radius: 25px 0 0 27px;
+    float: right;
+    margin-bottom: 1px;
+}
+

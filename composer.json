@@ -1,9 +1,9 @@
 {
     "name": "OpenMageModuleFostering/EMALLTWITTER",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "GNU-General-Public-License",
     "homepage": "",
-    "description": "SMD Emall Twitter extension",
+    "description": "ExtensionsMall Twitter Timeline Plugin extension",
     "authors": [
     {
         "name": "Extensions Mall",

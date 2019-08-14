@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/emalltwitter.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="emalltwitter/twitter" name="emalltwitter" template="emalltwitter/twitter.phtml" after="-" />
+        </reference> 
+        <!-- <reference name="left">
+            <block type="emalltwitter/twitter" name="emalltwitter-inline" template="emalltwitter/twitter-inline.phtml" after="-" />
+        </reference> -->
+    </default>
+</layout>
