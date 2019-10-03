@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/EMALLTWITTER",
+    "name": "OpenMageModuleFostering\/EMALLTWITTER",
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
     "description": "ExtensionsMall Twitter Timeline Plugin extension",
     "authors": [
-    {
-        "name": "Extensions Mall",
-        "email": "info@extensionsmall.com"
-    }
-],
+        {
+            "name": "Extensions Mall",
+            "email": "info@extensionsmall.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
